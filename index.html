@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Sample Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 0;
+        }
+        
+        h1 {
+            color: white;
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInDown 1s ease-out;
+        }
+        
+        .subtitle {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.2em;
+            animation: fadeInUp 1s ease-out 0.5s both;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 1s ease-out 1s both;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .sample-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .button {
+            display: inline-block;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            margin: 10px;
+        }
+        
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .counter {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        #clickCount {
+            font-size: 2em;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        footer {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to My Sample Website</h1>
+            <p class="subtitle">A beautiful, interactive demo built with HTML, CSS, and JavaScript</p>
+        </header>
+        
+        <div class="card">
+            <h2>About This Project</h2>
+            <p>This is a sample website created to demonstrate web development skills. It features responsive design, smooth animations, and interactive elements powered by JavaScript.</p>
+            
+            <div class="image-container">
+                <img src="sample-image.jpg" alt="Sample Image" class="sample-image" id="mainImage">
+                <p><small>Sample image for demonstration</small></p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Interactive Features</h2>
+            <p>Try out these interactive elements:</p>
+            
+            <div class="counter">
+                <p>Button Clicks: <span id="clickCount">0</span></p>
+                <button class="button" onclick="incrementCounter()">Click Me!</button>
+                <button class="button" onclick="resetCounter()">Reset</button>
+            </div>
+            
+            <div style="text-align: center;">
+                <button class="button" onclick="changeBackgroundColor()">Change Background</button>
+                <button class="button" onclick="showAlert()">Show Message</button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Technologies Used</h2>
+            <ul style="padding-left: 20px;">
+                <li>HTML5 for structure</li>
+                <li>CSS3 for styling and animations</li>
+                <li>JavaScript for interactivity</li>
+                <li>GitHub Pages for hosting</li>
+            </ul>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 My Sample Website. Created with ❤️ for demonstration purposes.</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
